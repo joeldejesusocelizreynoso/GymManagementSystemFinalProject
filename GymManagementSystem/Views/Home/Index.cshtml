@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="title">Welcome to GMS</h1>
+        <p class="lead">The Best Training Management System for a Gym at an International Level.</p>
+    </section>
+    <br />
+
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+            <h2 id="gettingStartedTitle">Configure Members</h2>
+            <p>
+                Here you can acces Members.
+            </p>
+            <p>
+                <a href="/Members/Index" class="btn btn-primary">Access Members</a>
+            </p>
+        </section>
+        <section class="col-md-4" aria-labelledby="librariesTitle">
+            <h2 id="librariesTitle">Configure Trainers</h2>
+            <p>
+                Here you can acces Trainers.
+            </p>
+            <p>
+                <a href="/Trainers/Index" class="btn btn-primary">Access Trainers</a>
+            </p>
+        </section>
+        <section class="col-md-4" aria-labelledby="hostingTitle">
+            <h2 id="hostingTitle">Configure Classes</h2>
+            <p>
+                Here you can acces Classes.
+            </p>
+            <p>
+                <a href="/Classes/Index" class="btn btn-primary">Access Classes</a>
+            </p>
+        </section>
+        <section class="col-md-4" aria-labelledby="hostingTitle">
+            <h2 id="hostingTitle">Configure Subscriptions</h2>
+            <p>
+                Here you can acces Subscriptions.
+            </p>
+            <p>
+                <a href="/Subscriptions/Index" class="btn btn-primary">Access Subscription</a>
+            </p>
+
+            <br />
+            <p>
+                <button class="btn btn-danger" onclick="window.close();">Salir</button>
+            </p>
+        </section>
+    </div>
+</main>

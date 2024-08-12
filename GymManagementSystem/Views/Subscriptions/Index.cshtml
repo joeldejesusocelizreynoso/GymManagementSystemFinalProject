@@ -1,0 +1,52 @@
+﻿@model IEnumerable<GymManagementSystem.Models.Subscriptions>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Configure Subscriptions</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-warning text-white" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SubscriptionType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Members.FirstName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubscriptionType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Members.FirstName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.SubscriptionID }, new { @class = "btn btn-primary text-white" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.SubscriptionID }, new { @class = "btn btn-success text-white" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.SubscriptionID }, new { @class = "btn btn-danger text-white" })
+        </td>
+    </tr>
+}
+
+</table>
