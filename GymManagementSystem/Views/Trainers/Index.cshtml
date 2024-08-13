@@ -8,7 +8,7 @@
 <h2>Configure Trainers</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-warning text-white" })
 </p>
 <table class="table">
     <tr>
@@ -56,3 +56,8 @@
 }
 
 </table>
+
+
+<p>
+    <a href="/Home/Index" class="btn btn-secondary">Back to Index</a>
+</p>
